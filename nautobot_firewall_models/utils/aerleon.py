@@ -84,7 +84,7 @@ def generate_aerleon_config(servicedata, networkdata, pol, platform):
     LOGGER.debug("Parsing Network List")
     defs.ParseNetworkList(networkdata)
     LOGGER.debug("Parsing Policy")
-    pol = policy.ParsePolicy(pol, defs)
+    pol = policy.ParsePolicy(pol, defs, optimize=False)
     LOGGER.debug("Parsing Policy Completed")
 
     LOGGER.debug("Running Aerleon Against: %s", str(AERLEON_MAPPER[platform]["lib"]))
